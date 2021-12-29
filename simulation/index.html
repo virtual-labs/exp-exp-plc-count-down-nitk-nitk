@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/cdi.css" />
+<script type="text/javascript" src="js/cdi.js"></script>
+<script>
+var simsubscreennum=0;
+var temp=0;
+</script>
+</head>
+
+<body style="margin:0; font-family:verdana; color:#ffffff;">
+<div id="simscreen">
+<div id="title"><h3>PLC COUNT-DOWN INSTRUCTION</h3></div>
+
+<div class="simsubscreen">
+	<img style="position:absolute; left:10px; top:90px;" src="images/i1.png" />
+	<img style="position:absolute; left:350px; top:30px;" src="images/counter.png" />
+	<img style="position:absolute; left:10px; top:300px;" src="images/control.png" />
+	
+	<img id="off1" style="position:absolute; left:711px; top:111px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on1" style="position:absolute; left:711px; top:111px;  width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off2" style="position:absolute; left:713.5px; top:155px; width:22.5px; height:22.5px; " src="images/off.png" />
+	<img id="on2" style="position:absolute; left:713.5px; top:155px; width:22.5px; height:22.5px;" src="images/on.png" />
+	<img id="off3" style="position:absolute; left:717.5px; top:214px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on3" style="position:absolute; left:717.5px; top:214px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off4" style="position:absolute; left:716.5px; top:282px; width:22.5px; height:22.5px; " src="images/off.png" />
+	<img id="on4" style="position:absolute; left:716.5px; top:282px; width:22.5px; height:22.5px;" src="images/on.png" />
+	<img id="off5" style="position:absolute; left:717.5px; top:340px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on5" style="position:absolute; left:717.5px; top:340px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off6" style="position:absolute; left:717.5px; top:405px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on6" style="position:absolute; left:717.5px; top:405px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	
+	<div id="bit1" style="position:absolute; left:408px; top:93px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">I:1/0</div>
+	<div id="bit2" style="position:absolute; left:399px; top:195px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">C5:1/CD</div>
+	<div id="bit3" style="position:absolute; left:399px; top:262px; padding:2px; background-color:#009900; color:black; font-size:11px; font-weight:bold;">C5:1/DN</div>
+	<div id="bit4" style="position:absolute; left:399px; top:320px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">C5:1/DN</div>
+	<div id="bit5" style="position:absolute; left:408px; top:382.5px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">I:1/1</div>
+	
+	<div id="cu" style="position:absolute; left:274.5px; top:327.25px; background-color:#996600; width:20px; height:20px; border-radius:11px; border:2px solid #996600;"></div>
+	<div id="dc" style="position:absolute; left:274.5px; top:380px; background-color:#996600; width:20px; height:20px; border-radius:11px; border:2px solid #996600;"></div>
+
+	<button id="count" style="position:absolute; left:88px; top:318.25px; background-image: linear-gradient(to right, #FFEB99, #FED430, #E1B400, #C79F00, #a98700); width:22px; height:20px; border-radius:11px; cursor:pointer; border-color:darkgrey;" onmousedown="startCounter();" onmouseup="stopCounter();"></button>
+	
+	<button id="reset" style="position:absolute; left:87px; top:374.75px; background-image: linear-gradient(to right, #F0A7A7, #E35A5A, #D11313, #B00000, #980000); width:23px; height:20.5px; border-radius:11.5px; cursor:pointer; border-color:darkgrey;" onmousedown="reset();" onmouseup="offReset();"></button>
+	
+	<p id="accum" style="position:absolute; left:658.5px; top:149px;font-size:14.5px;">0</p>
+</div>
+
+<div id="copyright"> &copy; 2020 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal</div>
+
+</div>
+<script src="../assets/js/iframeResize.js"></script></body>
+</html>
